@@ -1,0 +1,33 @@
+# ROS2 构建产物
+build/
+install/
+log/
+
+# rosbag 录制数据（体积大，不入库）
+livox/
+
+# 预处理中间数据（体积大，可重新生成）
+preprocessed/*.ply
+preprocessed/*.png
+preprocessed/*_index.bin
+preprocessed/*_intensity.bin
+preprocessed/backup/
+
+# 标定数据存档（体积大）
+lidar_camera_calibration_data/
+
+# imgui 配置
+imgui.ini
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
