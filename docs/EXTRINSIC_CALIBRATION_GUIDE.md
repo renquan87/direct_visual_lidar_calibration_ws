@@ -53,7 +53,7 @@ hnurm_radar 项目中 `converter_config.yaml` 里的 R 和 T 用的是 **T_camer
 ### 4.1 构建项目
 
 ```bash
-cd /data/projects/radar/calib_ws
+cd /data/projects/radar/direct_visual_lidar_calibration_ws
 rm -rf build/ log/ install/
 colcon build --symlink-install
 source install/setup.bash
@@ -97,7 +97,7 @@ ros2 topic list
 ### 4.4 录制数据
 
 ```bash
-cd /data/projects/radar/calib_ws
+cd /data/projects/radar/direct_visual_lidar_calibration_ws
 source install/setup.bash
 mkdir -p livox
 
@@ -110,7 +110,7 @@ ros2 bag record /camera_info /image /livox/lidar -o livox/rosbag2_$(date +%Y_%m_
 ### 4.5 数据预处理
 
 ```bash
-cd /data/projects/radar/calib_ws
+cd /data/projects/radar/direct_visual_lidar_calibration_ws
 source install/setup.bash
 
 # 预处理（-a 自动检测话题，-v 可视化）
@@ -219,7 +219,7 @@ calib:
 ## 六、完整数据流总结
 
 ```
-calib_ws 标定
+direct_visual_lidar_calibration_ws 标定
        │
        ▼
 preprocessed/calib.json
@@ -281,7 +281,7 @@ python3 pnp_demo.py
 ## 九、目录结构
 
 ```
-calib_ws/
+direct_visual_lidar_calibration_ws/
 ├── src/
 │   └── direct_visual_lidar_calibration/   # 标定算法源码
 ├── livox/                                  # 录制的 rosbag 数据
